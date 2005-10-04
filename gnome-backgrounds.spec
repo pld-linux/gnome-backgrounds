@@ -1,12 +1,12 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl):	Zestaw tapet dla ¶rodowiska GNOME
 Name:		gnome-backgrounds
-Version:	2.12.0
+Version:	2.12.1
 Release:	1
 License:	GPL v2
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-backgrounds/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	0f9a24661d211977f993189770d92719
+# Source0-md5:	3f84adbe8c22e18033f10e8c506d601f
 URL:		http://www.gnome.org/
 BuildRequires:	intltool >= 0.33
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
