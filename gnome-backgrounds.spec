@@ -1,14 +1,14 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl):	Zestaw tapet dla ¶rodowiska GNOME
 Name:		gnome-backgrounds
-Version:	2.14.2.1
+Version:	2.15.92
 Release:	1
 License:	GPL v2
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-backgrounds/2.14/%{name}-%{version}.tar.bz2
-# Source0-md5:	10480df7c2e5a08c920c5b0a2ff4f161
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-backgrounds/2.15/%{name}-%{version}.tar.bz2
+# Source0-md5:	42497f5feb8c77efca6497f87222d2a1
 URL:		http://www.gnome.org/
-BuildRequires:	intltool >= 0.33
+BuildRequires:	intltool >= 0.35
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
