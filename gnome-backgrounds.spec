@@ -1,5 +1,5 @@
 Summary:	Set of backgrounds for GNOME desktop
-Summary(pl):	Zestaw tapet dla ¶rodowiska GNOME
+Summary(pl.UTF-8):   Zestaw tapet dla Å›rodowiska GNOME
 Name:		gnome-backgrounds
 Version:	2.16.2
 Release:	1
@@ -14,8 +14,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Set of backgrounds for GNOME desktop.
 
-%description -l pl
-Zestaw tapet dla ¶rodowiska GNOME.
+%description -l pl.UTF-8
+Zestaw tapet dla Å›rodowiska GNOME.
 
 %prep
 %setup -q
