@@ -1,5 +1,5 @@
 Summary:	Set of backgrounds for GNOME desktop
-Summary(pl.UTF-8):   Zestaw tapet dla środowiska GNOME
+Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
 Version:	2.16.2
 Release:	1
