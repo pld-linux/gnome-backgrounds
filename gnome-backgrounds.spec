@@ -1,17 +1,18 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
-Version:	2.22.0
+Version:	2.24.0
 Release:	1
 License:	GPL v2
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/2.22/%{name}-%{version}.tar.bz2
-# Source0-md5:	1997e020288ea6b91ed460c2c6bfc8d4
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/2.24/%{name}-%{version}.tar.bz2
+# Source0-md5:	fb84a0b2e63dd0aaa47d490d2a43209f
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	intltool >= 0.36.2
-Requires:	libgnome >= 2.20.0
+BuildRequires:	automake >= 1:1.9
+BuildRequires:	gettext-devel
+BuildRequires:	intltool >= 0.40.0
+Requires:	libgnome >= 2.24.0
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
 BuildArch:	noarch
@@ -40,8 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-[ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
-	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}
 
 %clean
