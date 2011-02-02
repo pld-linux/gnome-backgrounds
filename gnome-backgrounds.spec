@@ -11,6 +11,7 @@ URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel
 BuildRequires:	intltool >= 0.40.0
 Requires:	libgnome >= 2.24.0
 # sr@Latn vs. sr@latin
