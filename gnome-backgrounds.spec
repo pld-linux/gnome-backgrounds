@@ -1,12 +1,12 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
-Version:	3.8.0
+Version:	3.8.1
 Release:	1
 License:	GPL v2
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	39713493f1c729961ccb12617e0308ad
+# Source0-md5:	977a4e2b79e10efa7cf4e1188e73ab3d
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.11
