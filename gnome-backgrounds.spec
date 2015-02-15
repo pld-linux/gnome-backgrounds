@@ -2,13 +2,13 @@ Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
 Version:	3.14.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Themes
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/3.14/%{name}-%{version}.tar.xz
 # Source0-md5:	17aa5dcf0d4e335da4330414acfb98a9
 URL:		http://www.gnome.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
@@ -17,6 +17,7 @@ BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 # sr@Latn vs. sr@latin
 Conflicts:	glibc-misc < 6:2.7
+Conflicts:	gtk2-theme-engine-adwaita < 3.14
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
-%{_datadir}/gnome-background-properties/
+%doc AUTHORS ChangeLog MAINTAINERS NEWS README
+%{_datadir}/gnome-background-properties
 %{_datadir}/backgrounds/gnome
