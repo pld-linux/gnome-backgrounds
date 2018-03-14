@@ -1,18 +1,16 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
-Version:	3.24.0
+Version:	3.28.0
 Release:	1
 License:	GPL v2
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/3.24/%{name}-%{version}.tar.xz
-# Source0-md5:	10e9c789c36eeaab0f9336ea5ef2e32f
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/3.28/%{name}-%{version}.tar.xz
+# Source0-md5:	eca3276373841a0cec2ed582d52a5899
 URL:		http://www.gnome.org/
-BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake >= 1:1.11
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
-BuildRequires:	intltool >= 0.40.0
+BuildRequires:	meson >= 0.41.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 # sr@Latn vs. sr@latin
@@ -31,19 +29,13 @@ Zestaw tapet dla środowiska GNOME.
 %setup -q
 
 %build
-%{__intltoolize}
-%{__aclocal}
-%{__automake}
-%{__autoconf}
-%configure \
-	--disable-silent-rules
-%{__make}
+%meson build
+%meson_build -C build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+%meson_install -C build
 
 %find_lang %{name}
 
