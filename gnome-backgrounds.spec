@@ -1,20 +1,20 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
-Version:	3.30.0
+Version:	3.34.0
 Release:	1
 License:	GPL v2
 Group:		Themes
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/3.30/%{name}-%{version}.tar.xz
-# Source0-md5:	13ecd0e4bb4721a68310948e67dbaaaa
-URL:		http://www.gnome.org/
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-backgrounds/3.34/%{name}-%{version}.tar.xz
+# Source0-md5:	f350804df16cdc9ef5306087157cf31b
+URL:		https://www.gnome.org/
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	meson >= 0.41.0
+BuildRequires:	ninja >= 1.5
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
-# sr@Latn vs. sr@latin
-Conflicts:	glibc-misc < 6:2.7
 Conflicts:	gtk2-theme-engine-adwaita < 3.14
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,12 +30,13 @@ Zestaw tapet dla środowiska GNOME.
 
 %build
 %meson build
-%meson_build -C build
+
+%ninja_build -C build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%meson_install -C build
+%ninja_install -C build
 
 %find_lang %{name}
 
@@ -44,6 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS COPYING_CCBY* NEWS README
 %{_datadir}/gnome-background-properties
 %{_datadir}/backgrounds/gnome
