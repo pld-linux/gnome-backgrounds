@@ -1,12 +1,12 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
-Version:	46.0
+Version:	47.0
 Release:	1
 License:	CC-BY-SA v3.0
 Group:		Themes
-Source0:	https://download.gnome.org/sources/gnome-backgrounds/46/%{name}-%{version}.tar.xz
-# Source0-md5:	85907535d2ed9d4cc6158bee41c35110
+Source0:	https://download.gnome.org/sources/gnome-backgrounds/47/%{name}-%{version}.tar.xz
+# Source0-md5:	c763f03aef289a3cd32c8049bf58443e
 URL:		https://www.gnome.org/
 BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
