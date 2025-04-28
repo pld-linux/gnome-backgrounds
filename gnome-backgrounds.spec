@@ -1,16 +1,16 @@
 Summary:	Set of backgrounds for GNOME desktop
 Summary(pl.UTF-8):	Zestaw tapet dla środowiska GNOME
 Name:		gnome-backgrounds
-Version:	47.0
+Version:	48.0
 Release:	1
 License:	CC-BY-SA v3.0
 Group:		Themes
-Source0:	https://download.gnome.org/sources/gnome-backgrounds/47/%{name}-%{version}.tar.xz
-# Source0-md5:	c763f03aef289a3cd32c8049bf58443e
+Source0:	https://download.gnome.org/sources/gnome-backgrounds/48/%{name}-%{version}.tar.xz
+# Source0-md5:	a14f5d1f5b9e6e6ae92656e8b3aed225
 URL:		https://www.gnome.org/
 BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Conflicts:	gtk2-theme-engine-adwaita < 3.14
@@ -27,14 +27,14 @@ Zestaw tapet dla środowiska GNOME.
 %setup -q
 
 %build
-%meson build
+%meson
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
